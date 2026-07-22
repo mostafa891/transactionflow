@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { brand } from '@shared/constants/brand'
 import { useClientStore } from '@core/stores/clientStore'
-import { TfButton, TfCard, TfBadge, TfInput } from '@design/components'
+import { TfButton, TfCard, TfBadge } from '@design/components'
 
 const clientStore = useClientStore()
 
@@ -10,7 +11,7 @@ const magicLinks = ref([
     id: 'link-101',
     clientId: 'cli-1',
     clientName: 'Acme Logistics Inc.',
-    url: 'https://auraflow.transaction.software/p/acme-98231',
+    url: `https://${brand.domain}/p/acme-98231`,
     createdAt: '2026-07-16 09:00 AM',
     expiresAt: '2026-07-26 (in 4 days)',
     status: 'active',
@@ -23,7 +24,7 @@ const magicLinks = ref([
     id: 'link-102',
     clientId: 'cli-2',
     clientName: 'Brightline Marketing Studio',
-    url: 'https://auraflow.transaction.software/p/bright-44120',
+    url: `https://${brand.domain}/p/bright-44120`,
     createdAt: '2026-07-18 02:30 PM',
     expiresAt: '2026-07-28 (in 6 days)',
     status: 'active',
@@ -36,7 +37,7 @@ const magicLinks = ref([
     id: 'link-103',
     clientId: 'cli-3',
     clientName: 'Delta Construction Group',
-    url: 'https://auraflow.transaction.software/p/delta-11928',
+    url: `https://${brand.domain}/p/delta-11928`,
     createdAt: '2026-07-10 10:00 AM',
     expiresAt: '2026-07-20 (Expired)',
     status: 'expired',
@@ -59,7 +60,7 @@ function regenerateLink(id: string) {
   const link = magicLinks.value.find(l => l.id === id)
   if (link) {
     const newToken = Math.floor(10000 + Math.random() * 90000)
-    link.url = `https://auraflow.transaction.software/p/${link.clientName.toLowerCase().replace(/[^a-z0-9]/g, '')}-${newToken}`
+    link.url = `https://${brand.domain}/p/${link.clientName.toLowerCase().replace(/[^a-z0-9]/g, '')}-${newToken}`
     link.status = 'active'
     link.expiresAt = '2026-07-30 (in 7 days)'
     link.clicks = 0

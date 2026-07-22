@@ -5,7 +5,7 @@
 export const brand = {
   name: 'TransactionFlow',
   parentBrand: 'AuraFlow',
-  domain: 'auraflow.transaction.software',
+  domain: 'transaction.auraflow.software',
   tagline: 'Smart Transaction Clarification for Accountants',
   description: 'TransactionFlow removes the communication bottleneck between accountants and clients for uncategorized transactions — automatically tracking and receiving responses.',
   cta: {

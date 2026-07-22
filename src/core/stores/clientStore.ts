@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
+import { brand } from '@shared/constants/brand'
 import type { Client } from '@shared/types/client'
 
 export const useClientStore = defineStore('clients', () => {
@@ -18,7 +19,7 @@ export const useClientStore = defineStore('clients', () => {
       lastReminderDate: '2026-07-19',
       lastActivityDate: '2026-07-20',
       magicLinkStatus: 'active',
-      magicLinkUrl: 'https://tf.app/p/acme-98231',
+      magicLinkUrl: `https://${brand.domain}/p/acme-98231`,
       magicLinkExpiry: '2026-07-26',
       autoReminderEnabled: true,
       reminderSchedule: '3_days',
@@ -37,7 +38,7 @@ export const useClientStore = defineStore('clients', () => {
       lastReminderDate: '2026-07-21',
       lastActivityDate: '2026-07-21',
       magicLinkStatus: 'active',
-      magicLinkUrl: 'https://tf.app/p/bright-44120',
+      magicLinkUrl: `https://${brand.domain}/p/bright-44120`,
       magicLinkExpiry: '2026-07-28',
       autoReminderEnabled: true,
       reminderSchedule: '3_days',
@@ -56,7 +57,7 @@ export const useClientStore = defineStore('clients', () => {
       lastReminderDate: '2026-07-17',
       lastActivityDate: '2026-07-15',
       magicLinkStatus: 'expired',
-      magicLinkUrl: 'https://tf.app/p/delta-11928',
+      magicLinkUrl: `https://${brand.domain}/p/delta-11928`,
       magicLinkExpiry: '2026-07-20',
       autoReminderEnabled: false,
       reminderSchedule: '5_days',
