@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "firebase": "^11.10.0",
+    "firebase": "^11.7.1",
     "lucide-vue-next": "^1.0.0",
     "papaparse": "^5.5.4",
     "pinia": "^4.0.2",
