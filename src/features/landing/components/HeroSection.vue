@@ -63,32 +63,32 @@ import { TfButton } from '@design/components'
                   <strong>{{ brand.name }} Client Portal</strong>
                 </div>
                 <div class="app-status-badge">
-                  <span class="pulse-dot" /> Secured No-Password Link
+                  <span class="pulse-dot" /> Secured Link
                 </div>
               </div>
 
               <!-- High-Value Financial Cards -->
               <div class="mockup__grid">
                 <div class="m-card m-card--accent">
-                  <span class="m-label">Pending Clarification</span>
-                  <div class="m-val">5 Items <span class="m-sub text-down">↓ 3 answered today</span></div>
+                  <span class="m-label">Pending Items</span>
+                  <div class="m-val">5 Items <span class="m-sub text-down">↓ 3 answered</span></div>
                 </div>
 
                 <div class="m-card">
                   <span class="m-label">Portal Clicks</span>
-                  <div class="m-val">14 Clicks <span class="m-sub text-up">↑ Active Link</span></div>
+                  <div class="m-val">14 Clicks <span class="m-sub text-up">↑ Active</span></div>
                 </div>
 
                 <div class="m-card m-card--success">
                   <span class="m-label">Status</span>
-                  <div class="m-val">Active <span class="m-sub">Expires in 4 days</span></div>
+                  <div class="m-val">Active <span class="m-sub">In 4 days</span></div>
                 </div>
               </div>
 
               <!-- Interactive Transaction Feed Preview -->
               <div class="mockup__feed">
                 <div class="feed-header">
-                  <span>Questions Pending Client Answer</span>
+                  <span>Questions Pending Answer</span>
                   <span class="live-pill">LIVE PORTAL</span>
                 </div>
 
@@ -98,7 +98,7 @@ import { TfButton } from '@design/components'
                     <small>Amount: $89.99 · Date: Jul 15</small>
                   </div>
                   <div class="feed-cell">
-                    <span class="badge badge--warning">Client Answered: "Office Printer Paper"</span>
+                    <span class="badge badge--warning">Answered: "Printer Paper"</span>
                   </div>
                 </div>
 
@@ -108,7 +108,7 @@ import { TfButton } from '@design/components'
                     <small>Amount: $24.50 · Date: Jul 14</small>
                   </div>
                   <div class="feed-cell">
-                    <span class="badge badge--success">Receipt Photo Attached 📎</span>
+                    <span class="badge badge--success">Receipt Attached 📎</span>
                   </div>
                 </div>
 
@@ -133,7 +133,7 @@ import { TfButton } from '@design/components'
 
 <style scoped>
 .hero {
-  padding: var(--tf-space-16) 0 var(--tf-space-16);
+  padding: var(--tf-space-12) 0 var(--tf-space-16);
   overflow: hidden;
   position: relative;
 }
@@ -162,6 +162,7 @@ import { TfButton } from '@design/components'
   border-radius: var(--tf-radius-full);
   font-size: var(--tf-text-sm-size);
   font-weight: 600;
+  max-width: 100%;
 }
 
 .hero__badge-dot {
@@ -170,14 +171,16 @@ import { TfButton } from '@design/components'
   background: var(--tf-primary);
   border-radius: 50%;
   animation: tf-pulse 2s infinite;
+  flex-shrink: 0;
 }
 
 .hero__title {
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-size: clamp(1.65rem, 5.5vw, 3.5rem);
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.04em;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
   color: var(--tf-text-primary);
+  word-wrap: break-word;
 }
 
 .hero__subtitle {
@@ -202,6 +205,7 @@ import { TfButton } from '@design/components'
 
 .hero__avatars {
   display: flex;
+  flex-shrink: 0;
 }
 
 .hero__avatar {
@@ -228,12 +232,14 @@ import { TfButton } from '@design/components'
   position: relative;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .hero__glow {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
   background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   top: 50%;
@@ -265,11 +271,13 @@ import { TfButton } from '@design/components'
   padding: var(--tf-space-3) var(--tf-space-4);
   background: #F1F5F9;
   border-bottom: 1px solid var(--tf-border);
+  gap: var(--tf-space-2);
 }
 
 .mockup__dots {
   display: flex;
   gap: 6px;
+  flex-shrink: 0;
 }
 
 .mockup__dots span {
@@ -286,6 +294,10 @@ import { TfButton } from '@design/components'
   padding: 2px 10px;
   border-radius: 4px;
   border: 1px solid var(--tf-border);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
 }
 
 .dot-red { background: #EF4444; }
@@ -304,6 +316,7 @@ import { TfButton } from '@design/components'
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--tf-space-2);
 }
 
 .app-brand {
@@ -337,6 +350,7 @@ import { TfButton } from '@design/components'
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 
 .pulse-dot {
@@ -345,6 +359,7 @@ import { TfButton } from '@design/components'
   background: var(--tf-success);
   border-radius: 50%;
   animation: tf-pulse 1.5s infinite;
+  flex-shrink: 0;
 }
 
 .mockup__grid {
@@ -380,7 +395,7 @@ import { TfButton } from '@design/components'
 }
 
 .m-val {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--tf-text-primary);
   display: flex;
@@ -469,6 +484,7 @@ import { TfButton } from '@design/components'
 
 /* ── Responsive ── */
 @media (max-width: 968px) {
+  .hero { padding: var(--tf-space-8) 0 var(--tf-space-12); }
   .hero__inner {
     grid-template-columns: 1fr;
     gap: var(--tf-space-8);
@@ -476,12 +492,15 @@ import { TfButton } from '@design/components'
   }
 
   .hero__content { align-items: center; }
+  .hero__badge { align-self: center; text-align: center; }
   .hero__actions { justify-content: center; flex-direction: column; width: 100%; }
   .hero__actions .tf-btn { width: 100%; }
-  .hero__proof { justify-content: center; }
+  .hero__proof { justify-content: center; flex-direction: column; text-align: center; }
 }
 
 @media (max-width: 600px) {
+  .mockup__url { max-width: 140px; }
+  .mockup__body { padding: var(--tf-space-3); gap: var(--tf-space-3); }
   .mockup__grid {
     grid-template-columns: 1fr;
   }
