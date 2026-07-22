@@ -384,4 +384,27 @@ function handleFileUpload(e: Event) {
   font-size: 11px;
   color: var(--tf-text-muted);
 }
+
+@media (max-width: 600px) {
+  .client-portal-page {
+    padding: var(--tf-space-3) var(--tf-space-2);
+  }
+  .portal-container {
+    gap: var(--tf-space-4);
+  }
+  .portal-header {
+    padding: var(--tf-space-3) var(--tf-space-4);
+  }
+  .portal-card {
+    padding: var(--tf-space-4);
+    gap: var(--tf-space-4);
+    border-radius: var(--tf-radius-lg);
+  }
+  .txn-details-box {
+    padding: var(--tf-space-3);
+  }
+  .upload-box {
+    padding: var(--tf-space-3);
+  }
+}
 </style>

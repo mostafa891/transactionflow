@@ -306,4 +306,15 @@ function revokeLink(id: string) {
 .act-btn--revoke { color: var(--tf-error-dark); background: var(--tf-error-light); }
 
 .font-bold { font-weight: 700; }
+
+@media (max-width: 768px) {
+  .ml-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--tf-space-3);
+  }
+  .ml-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>

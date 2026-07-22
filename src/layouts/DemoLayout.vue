@@ -59,4 +59,11 @@ function closeWelcomeModal() {
   padding: var(--tf-space-6);
   overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+  .demo-layout__content {
+    padding: var(--tf-space-4);
+    padding-bottom: 80px; /* Space for mobile nav bar */
+  }
+}
 </style>

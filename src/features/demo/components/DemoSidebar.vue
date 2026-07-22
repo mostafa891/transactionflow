@@ -12,7 +12,7 @@ const mainNavItems = [
   { path: '/demo/transactions', label: 'Transactions', icon: '💳' },
   { path: '/demo/links', label: 'Magic Links ⭐', icon: '🔗' },
   { path: '/demo/review', label: 'Review Queue', icon: '🔍' },
-  { path: '/demo/reminders', label: 'Reminder Center', icon: '⏰' },
+  { path: '/demo/reminders', label: 'Reminders', icon: '⏰' },
   { path: '/demo/audit', label: 'Audit Trail', icon: '📜' },
   { path: '/demo/export', label: 'Export CSV', icon: '📤' },
   { path: '/demo/portal', label: 'Client Portal', icon: '📱' },
@@ -48,6 +48,21 @@ const isActive = (path: string) => {
       </router-link>
     </div>
   </aside>
+
+  <!-- Mobile Horizontal Nav Scroll Bar for phones -->
+  <nav class="mobile-nav-bar">
+    <div class="mobile-nav-inner">
+      <router-link
+        v-for="item in mainNavItems"
+        :key="item.path"
+        :to="item.path"
+        :class="['mobile-nav-item', { 'mobile-nav-item--active': isActive(item.path) }]"
+      >
+        <span class="mobile-nav-icon">{{ item.icon }}</span>
+        <span class="mobile-nav-label">{{ item.label }}</span>
+      </router-link>
+    </div>
+  </nav>
 </template>
 
 <style scoped>
@@ -65,32 +80,8 @@ const isActive = (path: string) => {
   display: flex;
   align-items: center;
   gap: var(--tf-space-3);
-  padding: var(--tf-space-2) var(--tf-space-2);
+  padding: var(--tf-space-2);
   margin-bottom: var(--tf-space-4);
-}
-
-.sidebar__brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.sidebar__name {
-  font-weight: 700;
-  font-size: var(--tf-text-base-size);
-  color: var(--tf-text-primary);
-  letter-spacing: -0.01em;
-}
-
-.sidebar__demo-tag {
-  font-size: 9px;
-  font-weight: 800;
-  color: var(--tf-primary);
-  background: var(--tf-primary-light);
-  padding: 2px 6px;
-  border-radius: var(--tf-radius-sm);
-  letter-spacing: 0.08em;
-  align-self: flex-start;
 }
 
 .sidebar__nav {
@@ -105,7 +96,7 @@ const isActive = (path: string) => {
   display: flex;
   align-items: center;
   gap: var(--tf-space-3);
-  padding: var(--tf-space-3) var(--tf-space-3);
+  padding: var(--tf-space-3);
   border-radius: var(--tf-radius);
   font-size: var(--tf-text-sm-size);
   font-weight: 500;
@@ -151,14 +142,66 @@ const isActive = (path: string) => {
   transition: var(--tf-transition-all);
 }
 
-.sidebar__cta:hover {
-  opacity: 0.95;
-  transform: translateY(-1px);
+/* Mobile Nav Bar */
+.mobile-nav-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid var(--tf-border);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.mobile-nav-inner {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 8px;
+  gap: 4px;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  min-width: 68px;
+  flex-shrink: 0;
+}
+
+.mobile-nav-icon {
+  font-size: 18px;
+}
+
+.mobile-nav-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--tf-text-muted);
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.mobile-nav-item--active {
+  background: var(--tf-primary-light);
+}
+
+.mobile-nav-item--active .mobile-nav-label {
+  color: var(--tf-primary);
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
   .sidebar {
     display: none;
+  }
+  .mobile-nav-bar {
+    display: block;
   }
 }
 </style>

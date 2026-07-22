@@ -304,4 +304,18 @@ const auditStore = useAuditStore()
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 600px) {
+  .dashboard-view__kpis {
+    grid-template-columns: 1fr;
+  }
+  .chart-bars {
+    gap: var(--tf-space-4);
+  }
+  .card-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
 </style>

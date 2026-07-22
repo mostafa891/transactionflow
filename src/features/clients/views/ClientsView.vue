@@ -348,4 +348,12 @@ function handleAddClient() {
   justify-content: space-between;
   margin-top: var(--tf-space-2);
 }
+
+@media (max-width: 600px) {
+  .clients-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--tf-space-3);
+  }
+}
 </style>

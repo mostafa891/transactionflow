@@ -233,4 +233,25 @@ function goToNext() {
 @media (max-width: 968px) {
   .guide-text span { display: none; }
 }
+
+@media (max-width: 768px) {
+  .demo-guide-bar {
+    padding: 8px 12px;
+    position: relative;
+    top: 0;
+  }
+  .guide-content {
+    gap: 8px;
+  }
+  .step-dots {
+    display: none;
+  }
+  .guide-text {
+    font-size: 12px;
+  }
+  .btn-next-step {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
 </style>
