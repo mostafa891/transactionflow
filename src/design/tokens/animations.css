@@ -1,0 +1,81 @@
+/* ============================================
+   TransactionFlow — Animation Tokens
+   Micro-interactions & transitions
+   ============================================ */
+
+:root {
+  /* ── Duration ── */
+  --tf-duration-fast: 100ms;
+  --tf-duration-base: 200ms;
+  --tf-duration-slow: 350ms;
+  --tf-duration-slower: 500ms;
+
+  /* ── Easing ── */
+  --tf-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --tf-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --tf-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --tf-ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Composed Transitions ── */
+  --tf-transition-colors: color var(--tf-duration-base) var(--tf-ease),
+                           background-color var(--tf-duration-base) var(--tf-ease),
+                           border-color var(--tf-duration-base) var(--tf-ease);
+  --tf-transition-transform: transform var(--tf-duration-base) var(--tf-ease);
+  --tf-transition-shadow: box-shadow var(--tf-duration-base) var(--tf-ease);
+  --tf-transition-all: all var(--tf-duration-base) var(--tf-ease);
+}
+
+/* ── Keyframes ── */
+@keyframes tf-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes tf-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes tf-fade-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes tf-scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes tf-slide-in-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes tf-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes tf-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes tf-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ── Utility Classes ── */
+.tf-animate-fade-in { animation: tf-fade-in var(--tf-duration-slow) var(--tf-ease) both; }
+.tf-animate-fade-up { animation: tf-fade-up var(--tf-duration-slow) var(--tf-ease) both; }
+.tf-animate-scale-in { animation: tf-scale-in var(--tf-duration-base) var(--tf-ease-bounce) both; }
+.tf-animate-float { animation: tf-float 3s var(--tf-ease) infinite; }
+
+/* ── Staggered Delays ── */
+.tf-delay-1 { animation-delay: 100ms; }
+.tf-delay-2 { animation-delay: 200ms; }
+.tf-delay-3 { animation-delay: 300ms; }
+.tf-delay-4 { animation-delay: 400ms; }
+.tf-delay-5 { animation-delay: 500ms; }
+.tf-delay-6 { animation-delay: 600ms; }

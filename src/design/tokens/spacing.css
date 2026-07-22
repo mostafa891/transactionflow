@@ -1,0 +1,41 @@
+/* ============================================
+   TransactionFlow — Spacing Tokens
+   Based on 8px grid system
+   ============================================ */
+
+:root {
+  /* ── Base Scale ── */
+  --tf-space-1: 0.25rem;   /* 4px  */
+  --tf-space-2: 0.5rem;    /* 8px  */
+  --tf-space-3: 0.75rem;   /* 12px */
+  --tf-space-4: 1rem;      /* 16px */
+  --tf-space-5: 1.25rem;   /* 20px */
+  --tf-space-6: 1.5rem;    /* 24px */
+  --tf-space-8: 2rem;      /* 32px */
+  --tf-space-10: 2.5rem;   /* 40px */
+  --tf-space-12: 3rem;     /* 48px */
+  --tf-space-16: 4rem;     /* 64px */
+  --tf-space-20: 5rem;     /* 80px */
+  --tf-space-24: 6rem;     /* 96px */
+  --tf-space-32: 8rem;     /* 128px */
+
+  /* ── Semantic Spacing ── */
+  --tf-gutter: 1.5rem;        /* 24px — Grid gutter */
+  --tf-section-gap: 5rem;     /* 80px — Between landing sections */
+  --tf-element-gap: 1rem;     /* 16px — Between sibling elements */
+  --tf-stack-tight: 0.5rem;   /* 8px  — Tight vertical stacking */
+  --tf-page-margin: 2rem;     /* 32px — Page edge margin */
+
+  /* ── Container ── */
+  --tf-container-max: 1280px;
+  --tf-container-narrow: 768px;
+  --tf-container-wide: 1440px;
+
+  /* ── Border Radius ── */
+  --tf-radius-sm: 0.25rem;    /* 4px  */
+  --tf-radius: 0.5rem;        /* 8px  */
+  --tf-radius-md: 0.75rem;    /* 12px */
+  --tf-radius-lg: 1rem;       /* 16px */
+  --tf-radius-xl: 1.5rem;     /* 24px */
+  --tf-radius-full: 9999px;   /* Pill  */
+}

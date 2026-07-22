@@ -1,0 +1,60 @@
+/* ============================================
+   TransactionFlow — Typography Tokens
+   Font: Inter (from Stitch "Precision & Flow")
+   ============================================ */
+
+:root {
+  /* ── Font Family ── */
+  --tf-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --tf-font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* ── Display ── */
+  --tf-text-display-size: 3rem;        /* 48px */
+  --tf-text-display-weight: 800;
+  --tf-text-display-height: 1.1;
+  --tf-text-display-tracking: -0.04em;
+
+  /* ── Headline Large ── */
+  --tf-text-h1-size: 2.25rem;          /* 36px */
+  --tf-text-h1-weight: 700;
+  --tf-text-h1-height: 1.2;
+  --tf-text-h1-tracking: -0.03em;
+
+  /* ── Headline Medium ── */
+  --tf-text-h2-size: 1.75rem;          /* 28px */
+  --tf-text-h2-weight: 700;
+  --tf-text-h2-height: 1.25;
+  --tf-text-h2-tracking: -0.02em;
+
+  /* ── Headline Small ── */
+  --tf-text-h3-size: 1.25rem;          /* 20px */
+  --tf-text-h3-weight: 600;
+  --tf-text-h3-height: 1.4;
+  --tf-text-h3-tracking: -0.01em;
+
+  /* ── Body Large ── */
+  --tf-text-lg-size: 1.125rem;         /* 18px */
+  --tf-text-lg-weight: 400;
+  --tf-text-lg-height: 1.75;
+
+  /* ── Body Base ── */
+  --tf-text-base-size: 1rem;           /* 16px */
+  --tf-text-base-weight: 400;
+  --tf-text-base-height: 1.625;
+
+  /* ── Body Small ── */
+  --tf-text-sm-size: 0.875rem;         /* 14px */
+  --tf-text-sm-weight: 400;
+  --tf-text-sm-height: 1.5;
+
+  /* ── Label Medium ── */
+  --tf-text-label-size: 0.875rem;      /* 14px */
+  --tf-text-label-weight: 500;
+  --tf-text-label-height: 1.4;
+
+  /* ── Label Small / Caption ── */
+  --tf-text-caption-size: 0.75rem;     /* 12px */
+  --tf-text-caption-weight: 600;
+  --tf-text-caption-height: 1.3;
+  --tf-text-caption-tracking: 0.02em;
+}

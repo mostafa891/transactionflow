@@ -1,0 +1,72 @@
+/* ============================================
+   TransactionFlow — Color Tokens
+   Source: Stitch "Precision & Flow" Design System
+   ============================================ */
+
+:root {
+  /* ── Primary ── */
+  --tf-primary: #0066FF;
+  --tf-primary-hover: #0052CC;
+  --tf-primary-light: #E8F0FE;
+  --tf-primary-dark: #003FA4;
+  --tf-on-primary: #FFFFFF;
+  --tf-primary-container: #DAE1FF;
+
+  /* ── Secondary (Deep Slate) ── */
+  --tf-secondary: #0F172A;
+  --tf-secondary-light: #334155;
+  --tf-secondary-muted: #64748B;
+  --tf-on-secondary: #FFFFFF;
+
+  /* ── Tertiary (Success Emerald) ── */
+  --tf-success: #10B981;
+  --tf-success-light: #ECFDF5;
+  --tf-success-dark: #059669;
+  --tf-on-success: #FFFFFF;
+
+  /* ── Error / Danger ── */
+  --tf-error: #EF4444;
+  --tf-error-light: #FEF2F2;
+  --tf-error-dark: #B91C1C;
+  --tf-on-error: #FFFFFF;
+
+  /* ── Warning ── */
+  --tf-warning: #F59E0B;
+  --tf-warning-light: #FFFBEB;
+  --tf-warning-dark: #D97706;
+  --tf-on-warning: #FFFFFF;
+
+  /* ── Info ── */
+  --tf-info: #3B82F6;
+  --tf-info-light: #EFF6FF;
+
+  /* ── Surface & Background ── */
+  --tf-bg: #F8FAFC;
+  --tf-surface: #FFFFFF;
+  --tf-surface-hover: #F1F5F9;
+  --tf-surface-active: #E2E8F0;
+  --tf-surface-elevated: #FFFFFF;
+
+  /* ── Text ── */
+  --tf-text-primary: #0F172A;
+  --tf-text-secondary: #475569;
+  --tf-text-muted: #94A3B8;
+  --tf-text-disabled: #CBD5E1;
+  --tf-text-inverse: #FFFFFF;
+  --tf-text-link: #0066FF;
+  --tf-text-link-hover: #0052CC;
+
+  /* ── Borders ── */
+  --tf-border: #E2E8F0;
+  --tf-border-hover: #CBD5E1;
+  --tf-border-focus: #0066FF;
+  --tf-border-error: #EF4444;
+
+  /* ── Overlays ── */
+  --tf-overlay: rgba(15, 23, 42, 0.5);
+  --tf-glass: rgba(255, 255, 255, 0.8);
+  --tf-glass-border: rgba(255, 255, 255, 0.2);
+
+  /* ── Focus Ring ── */
+  --tf-focus-ring: 0 0 0 3px rgba(0, 102, 255, 0.2);
+}
