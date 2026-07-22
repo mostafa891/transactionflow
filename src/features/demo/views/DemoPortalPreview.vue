@@ -38,6 +38,11 @@ const questions = ref([
 
 const currentIndex = ref(0)
 const isComplete = ref(false)
+const fileInput = ref<HTMLInputElement | null>(null)
+
+function triggerFileInput() {
+  fileInput.value?.click()
+}
 
 const currentQ = computed(() => questions.value[currentIndex.value])
 
@@ -120,7 +125,7 @@ function goToComplete() {
           </div>
 
           <!-- Attach Receipt Photo -->
-          <div class="receipt-upload-box" @click="$refs.fileInput.click()">
+          <div class="receipt-upload-box" @click="triggerFileInput">
             <input ref="fileInput" type="file" accept="image/*,.pdf" class="file-input-hidden" @change="handleFile" />
             <span class="icon-camera">📷</span>
             <div v-if="!currentQ.file">

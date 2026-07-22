@@ -10,6 +10,11 @@ const isSubmitted = ref(false)
 const currentQuestionIndex = ref(0)
 const textAnswer = ref('')
 const uploadedFile = ref<string | null>(null)
+const fileInput = ref<HTMLInputElement | null>(null)
+
+function triggerFileInput() {
+  fileInput.value?.click()
+}
 
 const questions = ref([
   {
@@ -121,7 +126,7 @@ function handleFileUpload(e: Event) {
           <!-- Receipt Upload Zone -->
           <div class="upload-section">
             <label class="upload-label">Attach Receipt Photo (Optional):</label>
-            <div class="upload-box" @click="$refs.fileInput.click()">
+            <div class="upload-box" @click="triggerFileInput">
               <input ref="fileInput" type="file" accept="image/*,.pdf" class="hidden-input" @change="handleFileUpload" />
               <span class="upload-icon">📷</span>
               <span v-if="!uploadedFile" class="upload-text">Click to Snap Photo or Choose File</span>
