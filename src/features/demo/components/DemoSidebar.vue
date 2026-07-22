@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { brand } from '@shared/constants/brand'
 import { useRoute } from 'vue-router'
+import BrandLogo from '@/components/BrandLogo.vue'
 
 const route = useRoute()
 
@@ -26,16 +27,7 @@ const isActive = (path: string) => {
 <template>
   <aside class="sidebar">
     <div class="sidebar__brand">
-      <div class="sidebar__logo">
-        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-          <rect width="32" height="32" rx="8" fill="#0066FF"/>
-          <path d="M8 12H24M8 16H20M8 20H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="sidebar__brand-text">
-        <span class="sidebar__name">{{ brand.name }}</span>
-        <span class="sidebar__demo-tag">MVP DEMO</span>
-      </div>
+      <BrandLogo size="sm" />
     </div>
 
     <nav class="sidebar__nav">

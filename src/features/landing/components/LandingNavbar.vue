@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { brand } from '@shared/constants/brand'
 import { TfButton } from '@design/components'
+import BrandLogo from '@/components/BrandLogo.vue'
 
 const router = useRouter()
 const route = useRoute()
@@ -25,13 +26,7 @@ function scrollToSection(sectionId: string) {
   <header class="navbar">
     <div class="navbar__inner tf-container">
       <router-link to="/" class="navbar__brand">
-        <div class="navbar__logo">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="#0066FF"/>
-            <path d="M8 12H24M8 16H20M8 20H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <span class="navbar__name">{{ brand.name }}</span>
+        <BrandLogo size="md" />
       </router-link>
 
       <nav class="navbar__links" :class="{ 'navbar__links--open': isMobileMenuOpen }">
