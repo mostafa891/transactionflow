@@ -56,6 +56,7 @@ defineEmits<{
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .tf-btn:focus-visible {
@@ -72,23 +73,23 @@ defineEmits<{
   cursor: not-allowed;
 }
 
-/* ── Sizes ── */
+/* ── Sizes (Fluid Rems) ── */
 .tf-btn--sm {
   padding: var(--tf-space-2) var(--tf-space-4);
   font-size: var(--tf-text-sm-size);
-  height: 36px;
+  min-height: 2.25rem;
 }
 
 .tf-btn--md {
   padding: var(--tf-space-3) var(--tf-space-6);
   font-size: var(--tf-text-sm-size);
-  height: 44px;
+  min-height: 2.75rem;
 }
 
 .tf-btn--lg {
   padding: var(--tf-space-4) var(--tf-space-8);
   font-size: var(--tf-text-base-size);
-  height: 52px;
+  min-height: 3.25rem;
 }
 
 /* ── Variants ── */
@@ -145,8 +146,8 @@ defineEmits<{
 
 .tf-btn__spinner {
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   border: 2px solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;

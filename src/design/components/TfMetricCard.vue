@@ -105,4 +105,10 @@ withDefaults(defineProps<Props>(), {
   font-size: var(--tf-text-sm-size);
   color: var(--tf-text-muted);
 }
+
+@media (max-width: 600px) {
+  .tf-metric {
+    padding: var(--tf-space-4);
+  }
+}
 </style>

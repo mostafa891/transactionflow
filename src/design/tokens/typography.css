@@ -1,6 +1,6 @@
 /* ============================================
    TransactionFlow — Typography Tokens
-   Font: Inter (from Stitch "Precision & Flow")
+   Fluid typography with clamp() for responsive screens
    ============================================ */
 
 :root {
@@ -8,52 +8,52 @@
   --tf-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --tf-font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
-  /* ── Display ── */
-  --tf-text-display-size: 3rem;        /* 48px */
+  /* ── Display Fluid ── */
+  --tf-text-display-size: clamp(2.25rem, 5vw, 3.5rem);
   --tf-text-display-weight: 800;
   --tf-text-display-height: 1.1;
   --tf-text-display-tracking: -0.04em;
 
-  /* ── Headline Large ── */
-  --tf-text-h1-size: 2.25rem;          /* 36px */
+  /* ── Headline Large Fluid ── */
+  --tf-text-h1-size: clamp(1.75rem, 4vw, 2.5rem);
   --tf-text-h1-weight: 700;
   --tf-text-h1-height: 1.2;
   --tf-text-h1-tracking: -0.03em;
 
-  /* ── Headline Medium ── */
-  --tf-text-h2-size: 1.75rem;          /* 28px */
+  /* ── Headline Medium Fluid ── */
+  --tf-text-h2-size: clamp(1.35rem, 3vw, 1.85rem);
   --tf-text-h2-weight: 700;
   --tf-text-h2-height: 1.25;
   --tf-text-h2-tracking: -0.02em;
 
-  /* ── Headline Small ── */
-  --tf-text-h3-size: 1.25rem;          /* 20px */
+  /* ── Headline Small Fluid ── */
+  --tf-text-h3-size: clamp(1.1rem, 2.5vw, 1.35rem);
   --tf-text-h3-weight: 600;
   --tf-text-h3-height: 1.4;
   --tf-text-h3-tracking: -0.01em;
 
-  /* ── Body Large ── */
-  --tf-text-lg-size: 1.125rem;         /* 18px */
+  /* ── Body Large Fluid ── */
+  --tf-text-lg-size: clamp(1rem, 2vw, 1.125rem);
   --tf-text-lg-weight: 400;
-  --tf-text-lg-height: 1.75;
+  --tf-text-lg-height: 1.7;
 
-  /* ── Body Base ── */
-  --tf-text-base-size: 1rem;           /* 16px */
+  /* ── Body Base Fluid ── */
+  --tf-text-base-size: clamp(0.9375rem, 1.5vw, 1rem);
   --tf-text-base-weight: 400;
-  --tf-text-base-height: 1.625;
+  --tf-text-base-height: 1.6;
 
   /* ── Body Small ── */
-  --tf-text-sm-size: 0.875rem;         /* 14px */
+  --tf-text-sm-size: clamp(0.8125rem, 1.2vw, 0.875rem);
   --tf-text-sm-weight: 400;
   --tf-text-sm-height: 1.5;
 
   /* ── Label Medium ── */
-  --tf-text-label-size: 0.875rem;      /* 14px */
+  --tf-text-label-size: clamp(0.8125rem, 1.2vw, 0.875rem);
   --tf-text-label-weight: 500;
   --tf-text-label-height: 1.4;
 
   /* ── Label Small / Caption ── */
-  --tf-text-caption-size: 0.75rem;     /* 12px */
+  --tf-text-caption-size: clamp(0.6875rem, 1vw, 0.75rem);
   --tf-text-caption-weight: 600;
   --tf-text-caption-height: 1.3;
   --tf-text-caption-tracking: 0.02em;

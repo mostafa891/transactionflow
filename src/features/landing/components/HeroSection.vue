@@ -471,12 +471,24 @@ import { TfButton } from '@design/components'
 @media (max-width: 968px) {
   .hero__inner {
     grid-template-columns: 1fr;
-    gap: var(--tf-space-12);
+    gap: var(--tf-space-8);
     text-align: center;
   }
 
   .hero__content { align-items: center; }
-  .hero__actions { justify-content: center; }
+  .hero__actions { justify-content: center; flex-direction: column; width: 100%; }
+  .hero__actions .tf-btn { width: 100%; }
   .hero__proof { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .mockup__grid {
+    grid-template-columns: 1fr;
+  }
+  .feed-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--tf-space-2);
+  }
 }
 </style>
